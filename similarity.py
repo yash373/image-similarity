@@ -33,7 +33,7 @@ def similarity(image1, image2):
                 ]
             },
         ],
-        temperature=0,
+        temperature=1,
         max_tokens=1024,
         top_p=1,
         stream=False,
