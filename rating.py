@@ -32,13 +32,13 @@ def rating(image1):
                 ]
             },
         ],
-        temperature=1.5,
+        temperature=2,
         max_tokens=1024,
         top_p=1,
         stream=False,
         stop=None,
     )
 
-    return int(completion.choices[0].message.content)
+    return (completion.choices[0].message.content)
 
 
