@@ -1,10 +1,9 @@
 from similarity import similarity
 from image_upload import upload_image
+from rating import rating
 
 # Test
 
-image1 = upload_image("img1.jpg")
+image1 = upload_image("IMG_20241110_000015_007.jpg")
 
-image2 = upload_image("img2.jpg")
-
-print((similarity(image1, image2)/10000)*100)
+print(rating(image1))
