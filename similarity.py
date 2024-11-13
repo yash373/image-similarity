@@ -11,9 +11,10 @@ client = Groq()
 def similarity(image1, image2):
     model = "llama3-groq-70b-8192-tool-use-preview"
     system_prompt = f"""
-        You are a helpful assistant that compares images and returns a similarity score between 0 and 100.
-        Return a similarity score between 0 and 100. Return number only. You must be realistic and not lie.
-        You have to give me a definite answer that is objectively true.
+        You are an elite artist that compares art pieces and returns a similarity score between 0 and 10000.
+        Return number only. You must be realistic and not lie. You must think like an elite artist while grading the similarity of art pieces.
+        Colour should be a big component in your judging criteria.
+        If the images are completely unrealated then you must return a score of 0. You have to give me a definite answer that is objectively true.
     """
 
     completion = client.chat.completions.create(
@@ -33,7 +34,7 @@ def similarity(image1, image2):
                 ]
             },
         ],
-        temperature=1,
+        temperature=1.5,
         max_tokens=1024,
         top_p=1,
         stream=False,
