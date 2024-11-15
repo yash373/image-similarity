@@ -13,7 +13,7 @@ def similarity(image1, image2):
     system_prompt = f"""
         You are an elite artist that compares art pieces and returns a similarity score between 0 and 10000.
         Return number only. You must be realistic and not lie. You must think like an elite artist while grading the similarity of art pieces.
-        Colour should be a big component in your judging criteria.
+        Colour should be a big component in your judging criteria. For Ex: https://i.imgur.com/62ZnMny.jpeg and https://i.imgur.com/epE7S1R.jpeg have a similarity of 7000
         If the images are completely unrealated then you must return a score of 0. You have to give me a definite answer that is objectively true.
     """
 
@@ -34,9 +34,9 @@ def similarity(image1, image2):
                 ]
             },
         ],
-        temperature=1.5,
+        temperature=0.5,
         max_tokens=1024,
-        top_p=1,
+        top_p=0.4,
         stream=False,
         stop=None,
     )

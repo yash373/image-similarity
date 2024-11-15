@@ -4,8 +4,7 @@ from rating import rating
 
 # Test
 
-# print(upload_image("baku.jpg"))
+image1 = upload_image("img1.jpg")
+image2 = upload_image("img1.jpg")
 
-image1 = upload_image("IMG_20241110_000015_007.jpg")
-
-print(rating(image1))
+print(similarity(image1,image2))
